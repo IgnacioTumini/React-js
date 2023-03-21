@@ -1,0 +1,34 @@
+import React from "react";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
+import { AiOutlineShoppingCart } from "react-icons/ai";
+
+function NavBar() {
+  return (
+    <div>
+      <Navbar bg="info" expand="lg">
+        <Container>
+          <img src="" alt="" />
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto">
+              <Nav.Link href="#Inicio" className="letras-nav">
+                Inicio
+              </Nav.Link>
+              <Nav.Link href="#Productos" className="letras-nav">
+                Productos
+              </Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+          <button>
+            <AiOutlineShoppingCart />3
+          </button>
+        </Container>
+      </Navbar>
+    </div>
+  );
+}
+
+export default NavBar;
