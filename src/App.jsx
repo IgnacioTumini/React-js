@@ -10,7 +10,9 @@ function App() {
   return (
     <>
       <NavBar />
-      <ItemListContainer />
+      <ItemListContainer
+        greeting={"Hola, soy Ignacio Tumini, ¡Bienvenido a mi proyecto!"}
+      />
     </>
   );
 }

@@ -4,13 +4,15 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { AiOutlineShoppingCart } from "react-icons/ai";
-
+import logo from "../../assets/Logo_nuevo.png";
 function NavBar() {
   return (
     <div>
-      <Navbar bg="info" expand="lg">
+      <Navbar expand="lg" className="NavBar">
         <Container>
-          <img src="" alt="" />
+          <a href="#">
+            <img src={logo} alt="Logo empanadas" className="logo" />
+          </a>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
