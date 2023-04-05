@@ -2,6 +2,7 @@
 }
 .NavBar {
   background-color: #f7e2a2;
+  margin-bottom: 15px;
 }
 @keyframes logo-spin {
   from {
