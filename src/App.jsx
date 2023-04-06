@@ -4,6 +4,7 @@ import "./App.css";
 import NavBar from "./components/NavBar/NavBar";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import { Footer } from "./components/Footer/Footer";
+import { ItemCount } from "./components/ItemCount/ItemCount";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -14,6 +15,7 @@ function App() {
       <ItemListContainer
         greeting={"Hola, soy Ignacio Tumini, ¡Bienvenido a mi proyecto!"}
       />
+      <ItemCount />
       <Footer />
     </>
   );

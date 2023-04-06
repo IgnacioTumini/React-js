@@ -17,17 +17,19 @@ function NavBar() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="#Inicio" className="letras-nav">
-                Inicio
-              </Nav.Link>
+              <a href="#">
+                <Nav.Link href="#Inicio" className="letras-nav">
+                  Inicio
+                </Nav.Link>
+              </a>
               <Nav.Link href="#Productos" className="letras-nav">
                 Productos
               </Nav.Link>
+              <button>
+                <CartWidget />
+              </button>
             </Nav>
           </Navbar.Collapse>
-          <button>
-            <CartWidget />
-          </button>
         </Container>
       </Navbar>
     </div>
