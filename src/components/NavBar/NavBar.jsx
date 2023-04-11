@@ -6,25 +6,23 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 
 import logo from "../../assets/Logo_nuevo.png";
 import CartWidget from "../CartWidget/CartWidget";
+import { Link } from "react-router-dom";
 function NavBar() {
   return (
     <div>
       <Navbar expand="lg" className="NavBar">
         <Container>
-          <a href="#">
+          <Link to="/">
             <img src={logo} alt="Logo empanadas" className="logo" />
-          </a>
+          </Link>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
-              <a href="#">
-                <Nav.Link href="#Inicio" className="letras-nav">
-                  Inicio
-                </Nav.Link>
-              </a>
-              <Nav.Link href="#Productos" className="letras-nav">
-                Productos
-              </Nav.Link>
+            <Nav className="me-auto letras-nav ">
+              <Link to="/">Inicio</Link>
+
+              <Link to="/category/men's clothing">Ropa</Link>
+              <Link to="/category/jewelery">Joyas</Link>
+              <Link to="/category/electronics">Tecnologia</Link>
               <button>
                 <CartWidget />
               </button>

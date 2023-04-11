@@ -29,14 +29,33 @@ h1 {
 }
 .letras-nav {
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.letras-nav:hover {
+  color: gray;
+}
+.Image-item {
+  width: 40%;
+}
+.div-image {
+  justify-content: center;
+}
+.div-item-description {
+  border-radius: 2px;
+  border: 2px solid grey;
+  width: 50%;
+  height: 70vh;
 }
 .seccion-1 {
   display: flex;
   align-items: center;
-  flex-direction: column;
+
   padding-top: 80px;
   width: 100%;
-  min-height: 80vh;
+  min-height: 90vh;
   justify-content: center;
 }
 .ItemList {
