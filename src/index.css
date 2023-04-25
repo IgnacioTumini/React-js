@@ -52,6 +52,7 @@ h1 {
 .seccion-1 {
   display: flex;
   align-items: center;
+  flex-direction: column;
 
   padding-top: 80px;
   width: 100%;

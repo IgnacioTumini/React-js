@@ -23,9 +23,11 @@ function NavBar() {
               <Link to="/category/men's clothing">Ropa</Link>
               <Link to="/category/jewelery">Joyas</Link>
               <Link to="/category/electronics">Tecnologia</Link>
-              <button>
-                <CartWidget />
-              </button>
+              <Link to="/cart">
+                <button>
+                  <CartWidget />
+                </button>
+              </Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
