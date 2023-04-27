@@ -1,5 +1,6 @@
 import React from "react";
 import { Item } from "../Item/Item";
+import { Loading } from "../Loading/Loading";
 
 export const ItemList = ({ products }) => {
   return (
@@ -17,7 +18,7 @@ export const ItemList = ({ products }) => {
           ))}
         </div>
       ) : (
-        <h2>Cargando...</h2>
+        <Loading />
       )}
     </div>
   );
