@@ -2,27 +2,36 @@ import React, { useEffect, useState } from "react";
 import { ItemDetail } from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
 import { Loading } from "../Loading/Loading";
+import { doc, getDoc, getFirestore } from "firebase/firestore";
 
 export const ItemDetailContainer = () => {
   const [product, setProduct] = useState([]);
 
   const { pid } = useParams();
 
-  const getProducts = async () => {
-    const response = await fetch("https://fakestoreapi.com/products");
-    const data = response.json();
+  //  const getProducts = async () => {
+  //   const response = await fetch("https://fakestoreapi.com/products");
+  //  const data = response.json();
 
-    return data;
-  };
+  //  return data;
+  // };
+
+  // useEffect(() => {
+  //   getProducts().then((product) => {
+  //      if (pid) {
+  //       setProduct(product.filter((prod) => prod.id == pid));
+  //     }
+  //   });
+  // }, [pid]);
+  //console.log(product);
 
   useEffect(() => {
-    getProducts().then((product) => {
-      if (pid) {
-        setProduct(product.filter((prod) => prod.id == pid));
-      }
-    });
-  }, [pid]);
-  console.log(product);
+    const db = getFirestore();
+    const queryDoc = doc(db, "productos", pid);
+
+    getDoc(queryDoc);
+    //.then (resp => setProduct({id: product.id ...product.data()}))
+  }, []);
 
   return (
     <div className="seccion-1">

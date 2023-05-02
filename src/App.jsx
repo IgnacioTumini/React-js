@@ -15,6 +15,7 @@ import {
   Navigate,
 } from "react-router-dom";
 import { CartCountainer } from "./components/CartCountainer/CartCountainer";
+import { Inicio } from "./components/Inicio/inicio";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -26,9 +27,10 @@ function App() {
           <NavBar />
           <Routes>
             <Route path="/" element={<ItemListContainer />} />
-            <Route path="/Category/:cid" element={<ItemListContainer />} />
+            <Route path="/category/:cid" element={<ItemListContainer />} />
             <Route path="/Detail/:pid" element={<ItemDetailContainer />} />
             <Route path="/Cart" element={<CartCountainer />} />
+            <Route path="/Inicio" element={<Inicio />} />
 
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>

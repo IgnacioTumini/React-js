@@ -4,7 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 
-import logo from "../../assets/Logo_nuevo.png";
+import logo from "../../assets/logonav.png";
 import CartWidget from "../CartWidget/CartWidget";
 import { Link } from "react-router-dom";
 function NavBar() {
@@ -12,17 +12,15 @@ function NavBar() {
     <div>
       <Navbar expand="lg" className="NavBar">
         <Container>
-          <Link to="/">
-            <img src={logo} alt="Logo empanadas" className="logo" />
+          <Link to="/inicio">
+            <img src={logo} alt="Logo Sweetly" className="logo" />
           </Link>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto letras-nav ">
-              <Link to="/">Inicio</Link>
+              <Link to="/inicio">Inicio</Link>
+              <Link to="/">Productos</Link>
 
-              <Link to="/category/men's clothing">Ropa</Link>
-              <Link to="/category/jewelery">Joyas</Link>
-              <Link to="/category/electronics">Tecnologia</Link>
               <Link to="/cart">
                 <button>
                   <CartWidget />

@@ -1,7 +1,7 @@
 import { useCartContext } from "../Context/CartContext";
 
 export const CartCountainer = () => {
-  const { cartList, vaciarCarrito } = useCartContext();
+  const { cartList, vaciarCarrito, precioTotal } = useCartContext();
 
   return (
     <div className="seccion-1 ">
@@ -12,6 +12,7 @@ export const CartCountainer = () => {
           <button onClick>X</button>
         </li>
       ))}
+      <h3>Precio Total: ${precioTotal()}</h3>
       <button onClick={vaciarCarrito}>Vaciar carrito</button>
     </div>
   );
