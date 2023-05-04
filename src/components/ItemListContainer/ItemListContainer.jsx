@@ -18,36 +18,10 @@ const ItemListContainer = ({ greeting }) => {
 
   const { cid } = useParams();
 
-  // const getProduct = async () => {
-  //  const response = await fetch("https://fakestoreapi.com/products?limit=9");
-  // const data = response.json();
-
-  // return data;
-  // };
-
-  //useEffect(() => {
-  //   if (cid) {
-  //    getProduct()
-  //      .then((products) => {
-  //        setProducts(products.filter((prod) => prod.category === cid));
-  //        console.log(setProducts);
-  //       })
-  //       .finally(() => setIsLoading(false));
-  // } else {
-  // getProduct()
-  // .then((products) => {
-  // setProducts(products);
-  //onsole.log(setProducts);
-  //})
-  //.finally(() => setIsLoading(false));
-  //}
-  //}, [cid]);
-
   useEffect(() => {
+    const db = getFirestore();
+    const queryColletion = collection(db, "productos");
     if (cid) {
-      const db = getFirestore();
-      const queryColletion = collection(db, "productos");
-
       const queryFilter = query(queryColletion, where("category", "==", cid));
 
       getDocs(queryFilter)
@@ -62,9 +36,6 @@ const ItemListContainer = ({ greeting }) => {
         .catch((err) => console.log(err))
         .finally(() => setIsLoading(false));
     } else {
-      const db = getFirestore();
-      const queryColletion = collection(db, "productos");
-
       getDocs(queryColletion)
         .then((resp) =>
           setProducts(

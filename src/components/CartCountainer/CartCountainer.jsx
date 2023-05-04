@@ -6,10 +6,17 @@ export const CartCountainer = () => {
   return (
     <div className="seccion-1 ">
       {cartList.map((product) => (
-        <li key={product.id}>
+        <li className="item-cart" key={product.id}>
           <img src={product.image} alt="imagen" className="w-25" />
-          Nombre : {product.title} - Cantidad : {product.quantity}
-          <button onClick>X</button>
+          <div className="descripcion-cart">
+            <h4>{product.title}</h4>
+            <hr></hr>
+            <p>Cantidad : {product.quantity}</p>
+          </div>
+
+          <button className="buttoneliminar" onClick>
+            X
+          </button>
         </li>
       ))}
       <h3>Precio Total: ${precioTotal()}</h3>

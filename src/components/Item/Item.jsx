@@ -5,7 +5,7 @@ export const Item = ({ id, image, title, name, price }) => {
   return (
     <div key={id} className="card w-25 align-items-center ">
       <img src={image} className="card-img-top w-100" alt="Foto del producto" />
-      <h5>{title}</h5>
+      <h5 className="text-center">{title}</h5>
       <div className="card-body">
         <label htmlFor=""> Precio: ${price}</label>
       </div>

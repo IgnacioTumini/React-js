@@ -5,7 +5,7 @@ import { useCartContext } from "../Context/CartContext";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-export const ItemDetail = (product) => {
+export const ItemDetail = ({ product }) => {
   const { agregarAlCart, cartList } = useCartContext();
   const [tieneCantidad, ActualizarCantidad] = useState(false);
 
@@ -17,7 +17,7 @@ export const ItemDetail = (product) => {
 
   console.log(cartList);
   return (
-    <div className="row w-100">
+    <div className="row w-100 justify-content-center">
       <div className="col-6 d-flex  div-image ">
         <img
           src={product.image}
@@ -25,7 +25,7 @@ export const ItemDetail = (product) => {
           className="Image-item"
         />
       </div>
-      <div className="col-6 w-40 div-item-description">
+      <div className="col-6 w-40 div-item-description ">
         <h2>{product.title}</h2>
         <p>{product.description}</p>
         <h3>Precio: ${product.price}</h3>

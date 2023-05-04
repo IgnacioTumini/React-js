@@ -20,13 +20,12 @@ function NavBar() {
             <Nav className="me-auto letras-nav ">
               <Link to="/inicio">Inicio</Link>
               <Link to="/">Productos</Link>
-
-              <Link to="/cart">
-                <button>
-                  <CartWidget />
-                </button>
-              </Link>
             </Nav>
+            <Link to="/cart">
+              <button>
+                <CartWidget />
+              </button>
+            </Link>
           </Navbar.Collapse>
         </Container>
       </Navbar>
