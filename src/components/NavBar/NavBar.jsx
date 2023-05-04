@@ -18,8 +18,8 @@ function NavBar() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto letras-nav ">
-              <Link to="/inicio">Inicio</Link>
-              <Link to="/">Productos</Link>
+              <Link to="/">Inicio</Link>
+              <Link to="/productos">Productos</Link>
             </Nav>
             <Link to="/cart">
               <button>
