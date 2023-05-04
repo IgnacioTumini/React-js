@@ -34,12 +34,12 @@ export const ItemDetail = ({ product }) => {
             <Link to="/cart">
               <button>Terminar compra</button>
             </Link>
-            <Link to="/">
-              <button>Seguir comprnado</button>
+            <Link to="/productos">
+              <button>Seguir comprando</button>
             </Link>
           </>
         ) : (
-          <ItemCount initial={1} stock={5} onAdd={onAdd} />
+          <ItemCount initial={1} stock={20} onAdd={onAdd} />
         )}
       </div>
     </div>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const useCount = ({ initial = 1, max = 5, min = 1 }) => {
+export const useCount = ({ initial = 1, max = 20, min = 1 }) => {
   if (initial < min || initial > max) initial = min;
 
   const [contador, setContador] = useState(initial);

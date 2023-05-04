@@ -51,8 +51,8 @@ const ItemListContainer = ({ greeting }) => {
   }, [cid]);
 
   return (
-    <div className="seccion-1">
-      <div className="d-flex d-row gap-2 w-100 align-items-center justify-content-center p-10">
+    <div className="categorias">
+      <div className="d-flex d-row gap-2 w-100 align-items-center justify-content-center p-90">
         <Link to="/category/bordado">
           <button>Libretas Bordadas</button>
         </Link>
@@ -60,8 +60,9 @@ const ItemListContainer = ({ greeting }) => {
           <button>Libretas de Tela</button>
         </Link>
       </div>
-
-      {isLoading ? <Loading /> : <ItemList products={products} />}
+      <div className="seccion-1">
+        {isLoading ? <Loading /> : <ItemList products={products} />}
+      </div>
     </div>
   );
 };

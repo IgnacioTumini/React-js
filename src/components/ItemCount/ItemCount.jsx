@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useCount } from "../hooks/useCount";
 
-export const ItemCount = ({ initial = 1, stock = 5, min = 1, onAdd }) => {
+export const ItemCount = ({ initial = 1, stock = 20, min = 1, onAdd }) => {
   const { contador, increment, decrement, reset } = useCount(
     initial,
     stock,
