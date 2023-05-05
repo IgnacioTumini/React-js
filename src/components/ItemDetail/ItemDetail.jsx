@@ -17,7 +17,7 @@ export const ItemDetail = ({ product }) => {
 
   console.log(cartList);
   return (
-    <div className="row w-100 justify-content-center">
+    <div className="row w-100 justify-content-center margin-auto">
       <div className="col-6 d-flex  div-image ">
         <img
           src={product.image}
@@ -32,10 +32,10 @@ export const ItemDetail = ({ product }) => {
         {tieneCantidad ? (
           <>
             <Link to="/cart">
-              <button>Terminar compra</button>
+              <button className="button">Terminar compra</button>
             </Link>
             <Link to="/productos">
-              <button>Seguir comprando</button>
+              <button className="button">Seguir comprando</button>
             </Link>
           </>
         ) : (

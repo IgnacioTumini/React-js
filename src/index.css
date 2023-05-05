@@ -24,6 +24,7 @@ body {
   gap: 10px;
   width: 100%;
   justify-content: center;
+  height: 100%;
 }
 
 h1 {
@@ -78,17 +79,43 @@ h1 {
   justify-content: center;
   text-align: center;
 }
+.margin-auto {
+  margin-top: auto;
+}
 .categorias {
   padding-top: 15vh;
+  padding-bottom: 5vh;
 }
 .seccion-1 {
   display: flex;
   align-items: center;
   flex-direction: column;
 
-  padding-top: 20px;
   width: 100%;
   min-height: 90vh;
+  justify-content: center;
+}
+
+.seccion-cart {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  width: 100%;
+  min-height: 90vh;
+  justify-content: center;
+  padding-top: 15vh;
+}
+.card {
+}
+.div-form {
+  background-color: rgba(255, 255, 255, 0.884);
+  width: 50%;
+  padding: 8px;
+  border-radius: 8px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
   justify-content: center;
 }
 .ItemList {
@@ -101,7 +128,7 @@ h1 {
   justify-content: center;
   align-items: center;
 }
-button {
+.button {
   border-radius: 8px;
   border: 3px solid transparent;
   font-size: 1em;
@@ -111,12 +138,18 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover {
+.button:hover {
   border-color: #c66fd1;
 }
-button:focus,
-button:focus-visible {
+.button:focus,
+.button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+.b-vaciar-carrito {
+  border-radius: 3px solid red;
+}
+.b-vaciar-carrito:hover {
+  background-color: red;
 }
 
 @media (prefers-color-scheme: light) {

@@ -15,10 +15,18 @@ export const ItemCount = ({ initial = 1, stock = 20, min = 1, onAdd }) => {
   return (
     <div>
       <h2>Cantidad : {contador}</h2>
-      <button onClick={increment}> + </button>
-      <button onClick={decrement}> - </button>
+      <button className="button" onClick={increment}>
+        {" "}
+        +{" "}
+      </button>
+      <button className="button" onClick={decrement}>
+        {" "}
+        -{" "}
+      </button>
       {/*<button onClick={reset}>Reset</button>*/}
-      <button onClick={handleOnAdd}>AGREGAR AL CARRITO</button>
+      <button className="button" onClick={handleOnAdd}>
+        AGREGAR AL CARRITO
+      </button>
     </div>
   );
 };

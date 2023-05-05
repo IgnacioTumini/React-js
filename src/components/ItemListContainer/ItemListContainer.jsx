@@ -51,19 +51,21 @@ const ItemListContainer = ({ greeting }) => {
   }, [cid]);
 
   return (
-    <div className="categorias">
-      <div className="d-flex d-row gap-2 w-100 align-items-center justify-content-center p-90">
-        <Link to="/category/bordado">
-          <button>Libretas Bordadas</button>
-        </Link>
-        <Link to="/category/tela">
-          <button>Libretas de Tela</button>
-        </Link>
+    <>
+      <div className="categorias">
+        <div className="d-flex d-row gap-2 w-100 align-items-center justify-content-center p-90">
+          <Link to="/category/bordado">
+            <button className="button">Libretas Bordadas</button>
+          </Link>
+          <Link to="/category/tela">
+            <button className="button">Libretas de Tela</button>
+          </Link>
+        </div>
       </div>
       <div className="seccion-1">
         {isLoading ? <Loading /> : <ItemList products={products} />}
       </div>
-    </div>
+    </>
   );
 };
 export default ItemListContainer;

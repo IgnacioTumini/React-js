@@ -24,7 +24,7 @@ function NavBar() {
               <Link to="/productos">Productos</Link>
             </Nav>
             <Link className="justify-content-center d-flex" to="/cart">
-              <button className="d-flex">
+              <button className="d-flex button">
                 {cantidadTotal() > 0 && cantidadTotal()}
                 <CartWidget />
               </button>
