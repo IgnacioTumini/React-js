@@ -14,14 +14,14 @@ function NavBar() {
     <div>
       <Navbar expand="lg" className="NavBar">
         <Container>
-          <Link to="/inicio">
+          <Link to="../inicio">
             <img src={logo} alt="Logo Sweetly" className="logo" />
           </Link>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav ">
             <Nav className="me-auto letras-nav ">
-              <Link to="/">Inicio</Link>
-              <Link to="/productos">Productos</Link>
+              <Link to="../">Inicio</Link>
+              <Link to="../productos">Productos</Link>
             </Nav>
             <Link className="justify-content-center d-flex" to="/cart">
               <button className="d-flex button">
