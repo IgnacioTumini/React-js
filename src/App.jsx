@@ -7,7 +7,7 @@ import { Footer } from "./components/Footer/Footer";
 import { CartContextProvider } from "./components/Context/CartContext";
 import { ItemDetailContainer } from "./components/ItemDetailContainer/ItemDetailContainer";
 import { CartCountainer } from "./components/CartCountainer/CartCountainer";
-import { Inicio } from "./components/Inicio/inicio";
+import { Inicio } from "./components/Inicio/Inicio";
 
 import {
   BrowserRouter,
