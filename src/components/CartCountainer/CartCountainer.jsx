@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useCartContext } from "../Context/CartContext";
 import { useState } from "react";
-import { Button, Form } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 import {
   addDoc,
   collection,

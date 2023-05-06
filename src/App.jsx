@@ -6,6 +6,9 @@ import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 import { Footer } from "./components/Footer/Footer";
 import { CartContextProvider } from "./components/Context/CartContext";
 import { ItemDetailContainer } from "./components/ItemDetailContainer/ItemDetailContainer";
+import { CartCountainer } from "./components/CartCountainer/CartCountainer";
+import { Inicio } from "./components/Inicio/inicio";
+
 import {
   BrowserRouter,
   Router,
@@ -13,8 +16,6 @@ import {
   Routes,
   Navigate,
 } from "react-router-dom";
-import { CartCountainer } from "./components/CartCountainer/CartCountainer";
-import { Inicio } from "./components/Inicio/inicio";
 
 function App() {
   const [count, setCount] = useState(0);
