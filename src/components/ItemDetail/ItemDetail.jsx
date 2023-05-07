@@ -15,7 +15,6 @@ export const ItemDetail = ({ product }) => {
     ActualizarCantidad(true);
   };
 
-  console.log(cartList);
   return (
     <div className="row w-100 justify-content-center margin-auto">
       <div className="col-6 d-flex  div-image ">

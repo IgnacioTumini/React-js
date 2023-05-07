@@ -32,7 +32,6 @@ export const CartCountainer = () => {
       .then((resp) => setId(resp.id))
       .catch((err) => console.log(err))
       .finally(() => {
-        console.log("termino la promesa");
         vaciarCarrito();
       });
   };
@@ -45,7 +44,12 @@ export const CartCountainer = () => {
   };
   return cartList.length == 0 ? (
     <div className="seccion-cart">
-      {id && <h3> el id de la compra es {id}</h3>}
+      {id && (
+        <div className="text-center">
+          <h2>¡Gracias por su compra!</h2>
+          <h3> El id de la compra es : {id}</h3>
+        </div>
+      )}
       <h3>Su carrito esta vacio</h3>
       <Link to="/productos">
         <button className="button">Ver productos</button>
@@ -88,6 +92,7 @@ export const CartCountainer = () => {
               placeholder="Ejemplo@gmail.com"
               value={formData.email}
               onChange={handleOnChange}
+              required
             />
           </Form.Group>
 
@@ -99,6 +104,7 @@ export const CartCountainer = () => {
               placeholder=""
               value={formData.name}
               onChange={handleOnChange}
+              required
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicPhone">
@@ -109,6 +115,7 @@ export const CartCountainer = () => {
               placeholder=""
               value={formData.phone}
               onChange={handleOnChange}
+              required
             />
           </Form.Group>
 
