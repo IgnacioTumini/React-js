@@ -13,6 +13,10 @@
 
 [![6486746733740032.png](https://i.postimg.cc/DfDn75g4/6486746733740032.png)](https://postimg.cc/vDWpzrCG)
 
+## Web
+
+-Link a la pagina en servidor : (https://sweetly.netlify.app)
+
 ## Autor
 
 - Ignacio Tumini
