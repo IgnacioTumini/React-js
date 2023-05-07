@@ -15,7 +15,7 @@
 
 ## Web
 
--Link a la pagina en servidor : (https://sweetly.netlify.app)
+-Link a la pagina en servidor : https://sweetly.netlify.app
 
 ## Autor
 
