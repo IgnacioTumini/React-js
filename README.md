@@ -11,7 +11,7 @@
 - React JS
 - Boostrap
 
-! [FOTO DE REACT Y BOOSTRAP](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.educative.io%2Fblog%2Freact-bootstrap-tutorial&psig=AOvVaw3cQb6o8TqIM1Pox37B8oMn&ust=1683504442020000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCPjp1fP04f4CFQAAAAAdAAAAABAE)
+[![6486746733740032.png](https://i.postimg.cc/DfDn75g4/6486746733740032.png)](https://postimg.cc/vDWpzrCG)
 
 ## Autor
 
