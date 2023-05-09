@@ -10,8 +10,11 @@ import {
   getDoc,
   getFirestore,
 } from "firebase/firestore";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
 
 export const CartCountainer = () => {
+  const MySwal = withReactContent(Swal);
   const [id, setId] = useState(null);
   const [formData, setFormData] = useState({ name: "", phone: "", email: "" });
   const { cartList, vaciarCarrito, precioTotal, eliminarProducto } =
@@ -46,6 +49,19 @@ export const CartCountainer = () => {
     <div className="seccion-cart">
       {id && (
         <div className="text-center">
+          {MySwal.fire({
+            icon: "success",
+            title: <h1>¡Gracias por la compra!</h1>,
+            text: <p>Su id de compra es: {id}</p>,
+            showConfirmButton: false,
+            timer: 1500,
+            didOpen: () => {
+              // `MySwal` is a subclass of `Swal` with all the same instance & static methods
+              MySwal.showLoading();
+            },
+          }).then(() => {
+            return MySwal.fire(<p>Shorthand works too</p>);
+          })}
           <h2>¡Gracias por su compra!</h2>
           <h3> El id de la compra es : {id}</h3>
         </div>
