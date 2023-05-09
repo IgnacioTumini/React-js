@@ -11,10 +11,8 @@ import {
   getFirestore,
 } from "firebase/firestore";
 import Swal from "sweetalert2";
-import withReactContent from "sweetalert2-react-content";
 
 export const CartCountainer = () => {
-  const MySwal = withReactContent(Swal);
   const [id, setId] = useState(null);
   const [formData, setFormData] = useState({ name: "", phone: "", email: "" });
   const { cartList, vaciarCarrito, precioTotal, eliminarProducto } =
@@ -33,9 +31,16 @@ export const CartCountainer = () => {
     const queryCollection = collection(db, "orders");
     addDoc(queryCollection, order)
       .then((resp) => setId(resp.id))
+
       .catch((err) => console.log(err))
       .finally(() => {
         vaciarCarrito();
+        Swal.fire({
+          icon: "success",
+          title: "¡Gracias por la compra",
+          text: `Su numero de compra es:  ${id}`,
+          showConfirmButton: true,
+        });
       });
   };
 
@@ -47,32 +52,14 @@ export const CartCountainer = () => {
   };
   return cartList.length == 0 ? (
     <div className="seccion-cart">
-      {id && (
-        <div className="text-center">
-          {MySwal.fire({
-            icon: "success",
-            title: <h1>¡Gracias por la compra!</h1>,
-            text: <p>Su id de compra es: {id}</p>,
-            showConfirmButton: false,
-            timer: 1500,
-            didOpen: () => {
-              // `MySwal` is a subclass of `Swal` with all the same instance & static methods
-              MySwal.showLoading();
-            },
-          }).then(() => {
-            return MySwal.fire(<p>Shorthand works too</p>);
-          })}
-          <h2>¡Gracias por su compra!</h2>
-          <h3> El id de la compra es : {id}</h3>
-        </div>
-      )}
+      {id && <p>Su id de compra es : {id}</p>}
       <h3>Su carrito esta vacio</h3>
       <Link to="/productos">
         <button className="button">Ver productos</button>
       </Link>
     </div>
   ) : (
-    <div className="seccion-cart ">
+    <div className="seccion-cart">
       {cartList.map((product) => (
         <li className="item-cart" key={product.id}>
           <img src={product.image} alt="imagen" className="w-25" />
@@ -135,11 +122,7 @@ export const CartCountainer = () => {
             />
           </Form.Group>
 
-          <button
-            className="w-50 btn btn-success"
-            variant="primary"
-            type="submit"
-          >
+          <button className="w-50 btn btn-success" variant="primary">
             Terminar compra
           </button>
         </Form>
