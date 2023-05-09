@@ -30,18 +30,17 @@ export const CartCountainer = () => {
 
     const queryCollection = collection(db, "orders");
     addDoc(queryCollection, order)
-      .then((resp) => setId(resp.id))
-
-      .catch((err) => console.log(err))
-      .finally(() => {
+      .then((resp) => {
+        setId(resp.id);
         vaciarCarrito();
         Swal.fire({
           icon: "success",
           title: "¡Gracias por la compra",
-          text: `Su numero de compra es:  ${id}`,
+          text: `Su numero de compra es: ${resp.id}`,
           showConfirmButton: true,
         });
-      });
+      })
+      .catch((err) => console.log(err));
   };
 
   const handleOnChange = (event) => {
@@ -52,7 +51,6 @@ export const CartCountainer = () => {
   };
   return cartList.length == 0 ? (
     <div className="seccion-cart">
-      {id && <p>Su id de compra es : {id}</p>}
       <h3>Su carrito esta vacio</h3>
       <Link to="/productos">
         <button className="button">Ver productos</button>
