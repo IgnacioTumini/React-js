@@ -11,6 +11,7 @@ import {
   getFirestore,
 } from "firebase/firestore";
 import Swal from "sweetalert2";
+import { BsFillTrash3Fill } from "react-icons/bs";
 
 export const CartCountainer = () => {
   const [id, setId] = useState(null);
@@ -72,7 +73,7 @@ export const CartCountainer = () => {
             className="buttoneliminar button"
             onClick={() => eliminarProducto(product.id)}
           >
-            X
+            <BsFillTrash3Fill />
           </button>
         </li>
       ))}
