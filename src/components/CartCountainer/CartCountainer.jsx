@@ -35,7 +35,7 @@ export const CartCountainer = () => {
         vaciarCarrito();
         Swal.fire({
           icon: "success",
-          title: "¡Gracias por la compra",
+          title: "¡Gracias por la compra!",
           text: `Su numero de compra es: ${resp.id}`,
           showConfirmButton: true,
         });
